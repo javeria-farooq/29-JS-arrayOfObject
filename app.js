@@ -1,43 +1,76 @@
-// let obj = {
-//     age : '20',
-//     rollNo: '133517',
-//     arr : ['javeria ', 'farooq ', 'intermediate']
-// }
+/*///////// array of objects (array k undr obj) */
 
-// document.write(obj)  // abh ye print nh hga qk obj hmesha ek ek krke prnt hta h or jb hmn pura
-// ek sth prnt krwna h tb hmn ispe loop chlana prta h or obj ka loop srf or srf forIn h qk
-// ye bna hi srf or srf obj k lye h. or jb hmn obj ko akele mn prnt krwna h tb hm oose . se get
-// krte hn. t phle hm ek ek ko individually get krke check krke dkhte hn then uspe loop
-// chlaenge
+/*let siblings = [
+    {name : "javeria", age: 20},
+    {name : "aliza", age : 17},
+    {name : "afnan", age : 10}
+]
+//we print array, it's object, and it's key
+console.log(siblings)
+console.log(siblings[0])
+console.log(siblings[0].name)
 
-// document.write(obj.age, '<br>')
-// document.write(obj.rollNo, '<br>')
-// document.write(obj.arr)
+//now we print each object in the array
 
-// for (var i = 0; i < obj.arr.length; i++) {
-//     document.write(obj.arr[i])
-// }
+console.log(`now we print each object in the array`)
+for(let i = 0; i < siblings.length; i++) {
+    console.log(i, siblings[i])
+}
 
-// let objValues = Object.values(obj)
-// document.write(objValues)
+//now we print each object with each property
 
-// for (var key in obj) {
-    // document.write(obj[key], '<br>')
-// }
+console.log(`now we print each object with each property`)
 
-// document.write(Object.values(obj.arr))
+for(let i = 0; i < siblings.length; i++) {
+    console.log(`${i}:`)
+    for(let key in siblings[i]) {
+        console.log(`${key} : ${siblings[i][key]}`)
+    }
+}*/
 
-// for(var key in obj) {
-//     document.write(key, ' : ', obj[key], '<br>')
-// }
+/*ab hm bnaenge array of objects yni k objects ka ek array jske undr itne saare obj hnge*/
 
-    // for(var key in obj) {
-    //     document.write(key, ' : ', obj[key], '<br>')
-    //    for (var i = 0; i < obj.arr.length; i++) {
-    //     document.write(obj.arr[i], '<br>')
-    // }
-    // }
+let arrOfObj = [
+    {
+        id : '01',
+        name : 'infinix',
+        imageUrl : 'https://propakistani.pk/price/wp-content/uploads/2022/05/Infinix-Note-12-G96-price-in-Pakistan-200x300.png',
+        price : '30,000'
+    }, 
 
+    {
+        id : '02',
+        name : 'infinix note 2',
+        imageUrl : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDXSexQtb3V7jC7VMKyIupW3vidAZxy-ujUA&usqp=CAU',
+        price : '400,000' 
+    }, 
 
-// ok done h lkn ab kia hwa h obj mn jo keys hn wo as a string prnt hwi hn islye isne array ko
-// bh as a string prnt krwya h jski wjah se commas wgher sb aagae hn 
+    {
+        id : '03',
+        name : 'infinix note 12',
+        imageUrl : 'https://fdn.gsmarena.com/imgroot/news/23/05/infinix-note-30i-ofic/inline/-1200/gsmarena_001.jpg',
+        price : '50,000'
+    }
+]
+
+/*console.log(arrOfObj)
+console.log(arrOfObj[0])
+console.log(arrOfObj[1])
+console.log(arrOfObj[2])
+
+console.log(arrOfObj[0].name)
+console.log(arrOfObj[0].imageUrl)*/
+
+//with the help of loop
+
+for(let i = 0; i < arrOfObj.length; i++) {
+    console.log(i)
+    for(let key in arrOfObj[i]) {
+        console.log(key, ":", arrOfObj[i][key])
+    }
+}
+
+//now we access object in our DOM page and developed a simple program
+
+/*let image = document.querySelector(".img")
+image.setAttribute("src", arrOfObj[0].imageUrl)*/
